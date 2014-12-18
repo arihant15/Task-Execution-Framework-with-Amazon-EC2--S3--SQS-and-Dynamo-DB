@@ -8,13 +8,13 @@ from boto.sqs.message import Message
 
 conn = boto.sqs.connect_to_region(
     "us-west-2",
-     aws_access_key_id='AKIAI7PX4UYIBVTSWCMA',
-    aws_secret_access_key='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')
+     aws_access_key_id='AWS_ACCESS_KEY_ID',
+    aws_secret_access_key='AWS_SECRET_ACCESS_KEY')
 
 conn_dynamo = boto.dynamodb.connect_to_region(
     "us-west-2",
-     aws_access_key_id='AKIAI7PX4UYIBVTSWCMA',
-    aws_secret_access_key='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')
+     aws_access_key_id='AWS_ACCESS_KEY_ID',
+    aws_secret_access_key='AWS_SECRET_ACCESS_KEY')
 
 task_queue = conn.get_queue('Task_to_Process')
 processed_queue = conn.get_queue('Processed_Task')

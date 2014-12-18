@@ -11,17 +11,17 @@ from boto.s3.key import Key
 
 conn = boto.sqs.connect_to_region(
     "us-west-2",
-     aws_access_key_id='AKIAJHZT57DMEKJR3YMA',
-    aws_secret_access_key='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')
+     aws_access_key_id='AWS_ACCESS_KEY_ID',
+    aws_secret_access_key='AWS_SECRET_ACCESS_KEY')
 
 conn_dynamo = boto.dynamodb.connect_to_region(
     "us-west-2",
-     aws_access_key_id='AKIAJHZT57DMEKJR3YMA',
-    aws_secret_access_key='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')
+     aws_access_key_id='AWS_ACCESS_KEY_ID',
+    aws_secret_access_key='AWS_SECRET_ACCESS_KEY')
 
 conn_s3 = boto.connect_s3(
-     aws_access_key_id='AKIAJHZT57DMEKJR3YMA',
-    aws_secret_access_key='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')
+     aws_access_key_id='AWS_ACCESS_KEY_ID',
+    aws_secret_access_key='AWS_SECRET_ACCESS_KEY')
     is_secure=False,
     calling_format = boto.s3.connection.OrdinaryCallingFormat(),)
 
