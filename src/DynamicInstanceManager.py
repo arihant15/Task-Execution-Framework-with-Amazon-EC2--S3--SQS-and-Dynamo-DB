@@ -18,14 +18,14 @@ qConn = boto.sqs.connect_to_region(
 
 def createInstance():
 	conn.run_instances(
-        'ami-fd2573cd',
-        key_name='DataFile',
-        instance_type='m3.medium',
-        security_groups=['MyNetworkGroup'])
+        'AMI',
+        key_name='KEY_NAME',
+        instance_type='Instance_Type',
+        security_groups=['Network_Group'])
 	print "Instance created"
 
 def createSpotInstance():
-	req = conn.request_spot_instances(price='0.010',instance_type='m3.medium',image_id='ami-fd2573cd',
+	req = conn.request_spot_instances(price='0.010',instance_type='Intance_Type',image_id='AMI',
 	availability_zone_group='us-west-2')
 	job_instance_id = None
 	startTime=datetime.datetime.now()
